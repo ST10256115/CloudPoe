@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CloudPoe.Models.ProductViewModel>
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.ProductDesc</td>
+                <td>@product.ProductPrice.ToString("C")</td> 
+
+                <td>
+                    <img src="@product.ImageURL" alt="@product.ProductName" style="max-width:100px;" />
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@product.ProductID" class="btn btn-primary">View Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

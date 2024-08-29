@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Download File";
+}
+
+<h2>Download File</h2>
+
+<form asp-controller="File" asp-action="Download" method="get">
+    <input type="text" name="fileName" placeholder="Enter file name" />
+    <button type="submit">Download</button>
+</form>

@@ -1,6 +1,12 @@
 using CloudPoe.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Azure.Identity;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using Azure.Storage.Blobs.Specialized;
+using CloudPoe.Services; 
+
 
 namespace CloudPoe.Controllers
 {

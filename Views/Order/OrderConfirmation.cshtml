@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h2>Order Confirmation</h2>
+
+<p>Your order has been placed successfully!</p>
+
+@if (ViewData["OrderId"] != null)
+{
+    <p>Order ID: @ViewData["OrderId"]</p>
+}
+
+<p>
+    <a href="@Url.Action("Index", "Home")">Return to Home</a>
+</p>
